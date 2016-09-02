@@ -19,21 +19,22 @@
   <licenses>
     <license>
       <name>Apache License</name>
-      <url>https://raw.github.com/hammerlab/scala-parent-pom/master/LICENSE</url>
+      <url>https://raw.github.com/${github.repo}/master/LICENSE</url>
       <distribution>repo</distribution>
     </license>
   </licenses>
 
   <scm>
-    <connection>scm:git:git@github.com:hammerlab/scala-parent-pom.git</connection>
-    <developerConnection>scm:git:git@github.com:hammerlab/scala-parent-pom.git</developerConnection>
-    <url>scm:git:git@github.com:hammerlab/scala-parent-pom.git</url>
+    <connection>scm:git:git@github.com:${github.repo}.git</connection>
+    <developerConnection>scm:git:git@github.com:${github.repo}.git</developerConnection>
+    <url>scm:git:git@github.com:${github.repo}.git</url>
     <tag>HEAD</tag>
   </scm>
 
   <properties>
     <scala.version.prefix>2.11</scala.version.prefix>
     <scala.version>${scala.version.prefix}.8</scala.version>
+    <github.repo>hammerlab/scala-parent-pom</github.repo>
   </properties>
 
   <distributionManagement>
