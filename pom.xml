@@ -142,11 +142,13 @@
         <artifactId>maven-release-plugin</artifactId>
         <version>2.5</version>
         <configuration>
-          <branchName>b@{project.version}</branchName>
+          <branchName>b@{project.version}_${scala.version.prefix}</branchName>
+          <tagNameFormat>@{project.version}_${scala.version.prefix}</tagNameFormat>
+          <pushChanges>false</pushChanges>
+          <remoteTagging>false</remoteTagging>
           <useReleaseProfile>false</useReleaseProfile>
           <releaseProfiles>release</releaseProfiles>
           <goals>deploy</goals>
-          <tagNameFormat>@{project.version}</tagNameFormat>
         </configuration>
         <dependencies>
           <dependency>
