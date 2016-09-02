@@ -4,7 +4,7 @@
 
   <groupId>org.hammerlab</groupId>
   <artifactId>scala-parent-pom</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2-SNAPSHOT</version>
 
   <parent>
     <groupId>org.sonatype.oss</groupId>
@@ -28,7 +28,7 @@
     <connection>scm:git:git@github.com:${github.repo}.git</connection>
     <developerConnection>scm:git:git@github.com:${github.repo}.git</developerConnection>
     <url>scm:git:git@github.com:${github.repo}.git</url>
-    <tag>1.0.1</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <properties>
