@@ -16,6 +16,21 @@
   <packaging>pom</packaging>
   <name>Scala Parent POM: Common Configuration for Maven Scala Projects</name>
 
+  <licenses>
+    <license>
+      <name>Apache License</name>
+      <url>https://raw.github.com/hammerlab/magic-rdds/master/LICENSE</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <scm>
+    <connection>scm:git:git@github.com:hammerlab/scala-parent-pom.git</connection>
+    <developerConnection>scm:git:git@github.com:hammerlab/scala-parent-pom.git</developerConnection>
+    <url>scm:git:git@github.com:hammerlab/scala-parent-pom.git</url>
+    <tag>HEAD</tag>
+  </scm>
+
   <properties>
     <scala.version.prefix>2.11</scala.version.prefix>
     <scala.version>${scala.version.prefix}.8</scala.version>
