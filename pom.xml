@@ -19,7 +19,7 @@
   <licenses>
     <license>
       <name>Apache License</name>
-      <url>https://raw.github.com/hammerlab/magic-rdds/master/LICENSE</url>
+      <url>https://raw.github.com/hammerlab/scala-parent-pom/master/LICENSE</url>
       <distribution>repo</distribution>
     </license>
   </licenses>
