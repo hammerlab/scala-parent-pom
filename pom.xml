@@ -288,4 +288,13 @@
       </properties>
     </profile>
   </profiles>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.scalatest</groupId>
+      <artifactId>scalatest_${scala.version.prefix}</artifactId>
+      <version>3.0.0</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 </project>
