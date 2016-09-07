@@ -120,7 +120,6 @@
           </execution>
         </executions>
         <configuration>
-          <scalaVersion>${scala.version}</scalaVersion>
           <recompileMode>incremental</recompileMode>
           <useZincServer>true</useZincServer>
           <args>
@@ -293,6 +292,14 @@
   </profiles>
 
   <dependencies>
+
+    <dependency>
+      <groupId>org.scala-lang</groupId>
+      <artifactId>scala-library</artifactId>
+      <version>${scala.version}</version>
+    </dependency>
+
+    <!-- Test dep -->
     <dependency>
       <groupId>org.scalatest</groupId>
       <artifactId>scalatest_${scala.version.prefix}</artifactId>
