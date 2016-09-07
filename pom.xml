@@ -35,6 +35,8 @@
     <scala.version.prefix>2.11</scala.version.prefix>
     <scala.version>${scala.version.prefix}.8</scala.version>
     <github.repo>hammerlab/scala-parent-pom</github.repo>
+    <repo.root>${basedir}</repo.root>
+    <target.dir>${repo.root}/target</target.dir>
   </properties>
 
   <distributionManagement>
@@ -45,8 +47,8 @@
   </distributionManagement>
 
   <build>
-    <outputDirectory>target/scala-${scala.version}/classes</outputDirectory>
-    <testOutputDirectory>target/scala-${scala.version}/test-classes</testOutputDirectory>
+    <outputDirectory>${target.dir}/scala-${scala.version}/classes</outputDirectory>
+    <testOutputDirectory>${target.dir}/scala-${scala.version}/test-classes</testOutputDirectory>
     <plugins>
 
       <!-- disable surefire -->
@@ -102,6 +104,8 @@
               <args>
                 <arg>-g:vars</arg>
               </args>
+              <sourceDir>${repo.root}/src/main/scala</sourceDir>
+              <testSourceDir>${repo.root}/src/test/scala</testSourceDir>
             </configuration>
           </execution>
           <execution>
@@ -120,6 +124,9 @@
           </execution>
         </executions>
         <configuration>
+          <analysisCacheFile>${target.dir}/analysis/compile</analysisCacheFile>
+          <testAnalysisCacheFile>${target.dir}/analysis/test-compile</testAnalysisCacheFile>
+          <mainOutputDir>${target.dir}</mainOutputDir>
           <recompileMode>incremental</recompileMode>
           <useZincServer>true</useZincServer>
           <args>
@@ -210,10 +217,10 @@
             <version>4.2.0</version>
             <configuration>
               <sourceDirectories>
-                <sourceDirectory>src/main/scala</sourceDirectory>
+                <sourceDirectory>${repo.root}/src/main/scala</sourceDirectory>
               </sourceDirectories>
               <coberturaReports>
-                <coberturaReport>${basedir}/target/cobertura.xml</coberturaReport>
+                <coberturaReport>${target.dir}/cobertura.xml</coberturaReport>
               </coberturaReports>
             </configuration>
           </plugin>
