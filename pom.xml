@@ -141,6 +141,13 @@
           </jvmArgs>
         </configuration>
       </plugin>
+
+      <!-- 2.3 fixes https://github.com/mojohaus/versions-maven-plugin/issues/5 -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>versions-maven-plugin</artifactId>
+        <version>2.3</version>
+      </plugin>
     </plugins>
   </build>
 
