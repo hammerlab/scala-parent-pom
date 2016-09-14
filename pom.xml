@@ -157,8 +157,6 @@
         <configuration>
           <branchName>b@{project.version}_${scala.version.prefix}</branchName>
           <tagNameFormat>@{project.version}_${scala.version.prefix}</tagNameFormat>
-          <pushChanges>false</pushChanges>
-          <remoteTagging>false</remoteTagging>
           <useReleaseProfile>false</useReleaseProfile>
           <releaseProfiles>release</releaseProfiles>
           <goals>deploy</goals>
