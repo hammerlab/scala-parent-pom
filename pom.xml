@@ -148,6 +148,29 @@
         <artifactId>versions-maven-plugin</artifactId>
         <version>2.3</version>
       </plugin>
+
+      <!-- maven-release-plugin -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.5</version>
+        <configuration>
+          <branchName>b@{project.version}_${scala.version.prefix}</branchName>
+          <tagNameFormat>@{project.version}_${scala.version.prefix}</tagNameFormat>
+          <pushChanges>false</pushChanges>
+          <remoteTagging>false</remoteTagging>
+          <useReleaseProfile>false</useReleaseProfile>
+          <releaseProfiles>release</releaseProfiles>
+          <goals>deploy</goals>
+        </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>org.apache.maven.scm</groupId>
+            <artifactId>maven-scm-provider-gitexe</artifactId>
+            <version>1.8.1</version>
+          </dependency>
+        </dependencies>
+      </plugin>
     </plugins>
   </build>
 
@@ -266,28 +289,6 @@
               <nexusUrl>https://oss.sonatype.org/</nexusUrl>
               <autoReleaseAfterClose>true</autoReleaseAfterClose>
             </configuration>
-          </plugin>
-          <!-- maven-release-plugin -->
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-release-plugin</artifactId>
-            <version>2.5</version>
-            <configuration>
-              <branchName>b@{project.version}_${scala.version.prefix}</branchName>
-              <tagNameFormat>@{project.version}_${scala.version.prefix}</tagNameFormat>
-              <pushChanges>false</pushChanges>
-              <remoteTagging>false</remoteTagging>
-              <useReleaseProfile>false</useReleaseProfile>
-              <releaseProfiles>release</releaseProfiles>
-              <goals>deploy</goals>
-            </configuration>
-            <dependencies>
-              <dependency>
-                <groupId>org.apache.maven.scm</groupId>
-                <artifactId>maven-scm-provider-gitexe</artifactId>
-                <version>1.8.1</version>
-              </dependency>
-            </dependencies>
           </plugin>
         </plugins>
       </build>
